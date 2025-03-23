@@ -20,42 +20,160 @@
       <!-- navigasi fitur -->
       <div class="pilih-bangun-datar">
         <ul>
-          <li><a href="" class="persegi">Persegi</a></li>
-          <li><a href="" class="persegi-panjang">Persegi Panjang</a></li>
+          <li>
+            <button class="persegi" id="hitung-persegi" onclick="persegi()"
+              >Persegi</button
+            >
+          </li>
+          <li>
+            <button class="persegi-panjang" onclick="persegipanjang()"
+              >Persegi Panjang</a
+            >
+          </li>
         </ul>
       </div>
-      <section class="menu-luas-persegi">
-        <header>
-          <!-- Menghitung luas persegi -->
-          <h1 class="hitung-l-p">Luas Persegi</h1>
-          <!-- Gambar luas -->
-          <img src="Assets/persegi.jpeg" alt="" />
-          <div>
-            <p>Rumus luas persegi yaitu ...</p>
-            <p>L = S x S</p>
-            <p>Dimana:</p>
-            <ul>
-              <li>L = Luas</li>
-              <li>S = Sisi persegi</li>
-            </ul>
-            <p class="">Hitung luas persegi</p>
+      <div class="container-persegi" id="container-persegi">
+        <section class="menu-luas-persegi" id="hitung-persegi">
+          <header>
+            <!-- Menghitung luas persegi -->
+            <h1 class="hitung-l-p">Luas Persegi</h1>
+            <!-- Gambar luas -->
+            <img src="Assets/persegi.jpeg" alt="" />
+            <div>
+              <p style="margin-top: -5em">Rumus luas persegi yaitu ...</p>
+              <p style="margin-top: -17px">L = S x S</p>
+              <p>Dimana:</p>
+              <ul>
+                <li>L = Luas</li>
+                <li>S = Sisi persegi</li>
+              </ul>
+              <p class="perintah">Hitung luas persegi</p>
 
-            <input type="text" id="angka" />
-            <button onclick="hitungluas()">Konfirmasi</button>
+              <input type="text" id="angka" placeholder="Masukkan angka" />
+              <div>
+                <button class="Konfirmasi-ajah" onclick="hitungluas()">
+                  Konfirmasi
+                </button>
+                <button class="reset" onclick="reset()">Reset</button>
+              </div>
 
-            <p id="hasil"></p>
-          </div>
-        </header>
-      </section>
-      <section class="menu-luas-persegi-panjang">
-        <header>
-          <!-- menghitung keliling persegi -->
-          <h1>Keliling Persegi</h1>
-          <!-- Gambar keliling -->
-          <div></div>
-        </header>
-      </section>
+              <p id="hasil"></p>
+            </div>
+          </header>
+        </section>
+        <br />
+        <section class="menu-keliling-persegi">
+          <header>
+            <!-- Menghitung luas persegi -->
+            <h1 class="hitung-k-p">Keliling Persegi</h1>
+            <!-- Gambar luas -->
+            <img src="Assets/persegi.jpeg" alt="" />
+            <div>
+              <p style="margin-top: -5em">Rumus Keliling persegi yaitu ...</p>
+              <p style="margin-top: -17px">L = 4 x S</p>
+              <p>Dimana:</p>
+              <ul>
+                <li>K = Keliling</li>
+                <li>S = Sisi persegi</li>
+              </ul>
+              <p class="perintah-keliling-p">Hitung keliling persegi</p>
+
+              <input
+                type="text"
+                id="angka-keliling"
+                placeholder="Masukkan angka"
+              />
+              <div>
+                <button class="Konfirmasi-ajah" onclick="hitungkeliling()">
+                  Konfirmasi
+                </button>
+                <button class="reset" onclick="reset_keliling()">Reset</button>
+              </div>
+
+              <p id="hasil-keliling"></p>
+            </div>
+          </header>
+        </section>
+      </div>
+      <div class="container-persegi-panjang" id="container-persegi-panjang">
+        <section class="menu-luas-persegi" id="hitung-persegi">
+          <header>
+            <!-- Menghitung luas persegi -->
+            <h1 class="hitung-l-p">Luas Persegi Panjang</h1>
+            <!-- Gambar luas -->
+            <img src="Assets/20230722_215824-3285867518.webp" alt="" style="margin-top: 4.2em; margin-bottom: 7em;" />
+            <div>
+              <p style="margin-top: -5em">
+                Rumus luas persegi panjang yaitu ...
+              </p>
+              <p style="margin-top: -17px">L = P x L</p>
+              <p>Dimana:</p>
+              <ul>
+                <li>L = Luas</li>
+                <li>P = Panjang persegi panjang</li>
+                <li>l = Lebar persegi panjang</li>
+              </ul>
+              <p class="perintah">Hitung luas persegi panjang</p>
+              <p>Panjang</p>
+              <input type="text" id="angka-panjang-lpp" placeholder="Masukkan panjang" />
+              <p>lebar</p>
+              <input type="text" id="angka-lebar-lpp" placeholder="Masukkan lebar" />
+              <div>
+                <button class="Konfirmasi-ajah" onclick="hitungluasp_panjang()">
+                  Konfirmasi
+                </button>
+                <button class="reset-luas-pp" onclick="resetluasp_panjang()">Reset</button>
+              </div>
+
+              <p id="hasil-luas-pp"></p>
+            </div>
+          </header>
+        </section>
+        <br />
+        <section class="menu-keliling-persegi">
+          <header>
+            <!-- Menghitung luas persegi -->
+            <h1 class="hitung-k-p">Keliling Persegi panjang</h1>
+            <!-- Gambar luas -->
+            <img src="Assets/20230722_215824-3285867518.webp" alt="" style="margin-top: 4.2em; margin-bottom: 7em;" />
+            <div>
+              <p style="margin-top: -5em">
+                Rumus Keliling persegi panjang yaitu ...
+              </p>
+              <p style="margin-top: -17px">L = 2 x (P + L)</p>
+              <p>Dimana:</p>
+              <ul>
+                <li>K = Keliling</li>
+                <li>S = Sisi persegi panjang</li>
+              </ul>
+              <p class="perintah-keliling-p">Hitung keliling persegi</p>
+              <p>panjang</p>
+              <input
+                type="text"
+                id="angka-panjang-kpp"
+                placeholder="Masukkan panjang"
+              />
+              <p>lebar</p>
+              <input
+                type="text"
+                id="angka-lebar-kpp"
+                placeholder="Masukkan lebar"
+              />
+              <div>
+                <button class="Konfirmasi-ajah" onclick="hitungkelilingp_panjang()">
+                  Konfirmasi
+                </button>
+                <button class="reset-keliling-pp" onclick="reset_kelilingp_panjang()">Reset</button>
+              </div>
+
+              <p id="hasil-keliling-pp"></p>
+            </div>
+          </header>
+        </section>
+      </div>
     </main>
-    <footer></footer>
+    <footer>
+      <div style="background-color: rgb(82, 153, 235); height: 3em"></div>
+    </footer>
   </body>
 </html>
