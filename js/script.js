@@ -46,7 +46,11 @@ document.addEventListener("DOMContentLoaded", function () {
 function hitungluasp_panjang() {
   let angka_panjang = document.getElementById("angka-panjang-lpp").value;
   let angka_lebar = document.getElementById("angka-lebar-lpp").value;
-  if (angka_panjang === "" && angka_lebar === "") {
+  if (angka_panjang === "" || angka_panjang <= 0) {
+    alert("Angka yang dimasukkan tidak valid!");
+    return 0;
+  }
+  if (angka_lebar === "" || angka_lebar <= 0) {
     alert("Angka yang dimasukkan tidak valid!");
     return 0;
   }
@@ -60,11 +64,15 @@ function resetluasp_panjang() {
   document.getElementById("angka-lebar-lpp").value = " ";
   document.getElementById("hasil-luas-pp").innerHTML = " ";
 }
-
+// keliling persegi panjang
 function hitungkelilingp_panjang() {
   let angka_panjang_pp = document.getElementById("angka-panjang-kpp").value;
   let angka_lebar_pp = document.getElementById("angka-lebar-kpp").value;
-  if (angka_panjang_pp === "" && angka_lebar_pp === "") {
+  if (angka_panjang_pp === "" || angka_panjang_pp <= 0) {
+    alert("Angka yang dimasukkan tidak valid!");
+    return 0;
+  }
+  if (angka_lebar_pp === "" || angka_lebar_pp <= 0) {
     alert("Angka yang dimasukkan tidak valid!");
     return 0;
   }
