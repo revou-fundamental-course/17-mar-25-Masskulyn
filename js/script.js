@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function hitungluasp_panjang() {
   let angka_panjang = document.getElementById("angka-panjang-lpp").value;
   let angka_lebar = document.getElementById("angka-lebar-lpp").value;
-  if (angka_panjang === "" || angka <= 0) {
+  if (angka_panjang === "" && angka_lebar === "") {
     alert("Angka yang dimasukkan tidak valid!");
     return 0;
   }
