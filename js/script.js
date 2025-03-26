@@ -1,3 +1,4 @@
+// luas persegi
 function hitungluas() {
   let angka = document.getElementById("angka").value;
   if (angka === "" || angka <= 0) {
@@ -13,6 +14,7 @@ function reset() {
   document.getElementById("angka").value = " ";
   document.getElementById("hasil").innerHTML = " ";
 }
+// keliling persegi
 function hitungkeliling() {
   let angka = document.getElementById("angka-keliling").value;
   if (angka === "" || angka <= 0) {
@@ -28,11 +30,12 @@ function reset_keliling() {
   document.getElementById("angka-keliling").value = " ";
   document.getElementById("hasil-keliling").innerHTML = " ";
 }
+// menyembunyikan persegi panjang
 function persegi() {
   document.getElementById("container-persegi").style.display = "block";
   document.getElementById("container-persegi-panjang").style.display = "none";
 }
-
+// menyembunyikan persegi
 function persegipanjang() {
   document.getElementById("container-persegi").style.display = "none";
   document.getElementById("container-persegi-panjang").style.display = "block";
@@ -42,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("container-persegi").style.display = "block";
   document.getElementById("container-persegi-panjang").style.display = "none";
 });
-
+// luas persegi panjang
 function hitungluasp_panjang() {
   let angka_panjang = document.getElementById("angka-panjang-lpp").value;
   let angka_lebar = document.getElementById("angka-lebar-lpp").value;
